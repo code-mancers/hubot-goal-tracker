@@ -1,8 +1,8 @@
 {
-  "name": "hubot-example",
-  "description": "An example script pacakage for Hubot",
-  "version": "1.0.0",
-  "author": "Tom Bell <tomb@tomb.io>",
+  "name": "hubot-goal-tracker",
+  "description": "A hubot script that lets you create and track your goals",
+  "version": "0.0.1",
+  "author": "Emil Soman <emil@codemancers.com>",
   "license": "MIT",
 
   "keywords": [
@@ -12,27 +12,16 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-example.git"
+    "url": "git://github.com/codemancers/hubot-goal-tracker.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-example/issues"
+    "url": "https://github.com/codemancers/hubot-goal-tracker/issues"
   },
 
   "dependencies": {
-    "coffee-script": "~1.6"
+    "cradle": "~0.6"
   },
 
-  "devDependencies": {
-    "mocha": "*",
-    "chai": "*",
-    "sinon-chai": "*",
-    "sinon": "*"
-  },
-
-  "main": "index.coffee",
-
-  "scripts": {
-    "test": "script/test"
-  }
+  "main": "index.coffee"
 }

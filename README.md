@@ -1,35 +1,31 @@
-# Hubot Example
+hubot-goal-tracker
+==================
 
-An example script package for Hubot
+A hubot script that lets you create and track your goals
 
-[![Build Status](https://travis-ci.org/hubot-scripts/hubot-example.png)](https://travis-ci.org/hubot-scripts/hubot-example)
+### Configuration:
+    # CouchDB API endpoint
+    HUBOT_COUCHDB_URL=http://USERNAME:PASSWORD@couchdb.domain.com:5984
+    # OR the following if you want to use a different database named 'my_db'
+    HUBOT_COUCHDB_URL=http://USERNAME:PASSWORD@couchdb.domain.com:5984/my_db
 
-## Directory Structure
+    # Notification Room ID if you want to broadcast goal related activities
+    # For HipChat this is the XMPP JID of the room
+    HUBOT_GOAL_TRACKER_ROOM=<ROOM_ID>
 
-Using the common directory structure for hubot script packages it will be easy
-to manage and allow others to easily contribute to your package.
+### Commands:
+    hubot add goal "<GOAL>" # adds a goal for the weekend. (quotes required!)
+    hubot goals # shows pending goals
+    hubot goal <GOAL_ID> done # marks goal with id = GOAL_ID as done
 
-### script
+### Development :
+If couchdb is running locally on localhost:5984, you don't need to set
+HUBOT_COUCHDB_URL.
 
-This directory is home to a couple of development scripts; `bootstrap` and `test`
-they're used to bootstrap the development environment and run tests
-respectively.
+#### Testing on HipChat
+Set up a test account, add a test bot user and a test room and use the command:
 
-### src
+    HUBOT_HIPCHAT_JID=1234@chat.hipchat.com HUBOT_HIPCHAT_PASSWORD=password HUBOT_GOAL_TRACKER_ROOM=1234_room@conf.hipchat.com bin/hubot -a hipchat
 
-This directory is home to the actual hubot scripts in the package. Your
-`index.coffee` entry point will load the scripts from this directory.
-
-### test
-
-This directory is home to any tests you write for your scripts. This example
-package uses Mocha, Chai and Sinon to manage writing tests.
-
-## Advantages of Building a Package
-
-Some of the advantages of building an npm package for your hubot script(s) are:
-
-* You don't need to rely on when hubot-scripts package is released.
-* You can specify dependencies in the `package.json` rather than have users
-  manually specify them
-* You can easily add tests using your favourite frameworks and libraries
+This should make your bot user join all your rooms. You can test the bot using
+hipchat like you normally would.
