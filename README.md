@@ -3,7 +3,14 @@ hubot-goal-tracker
 
 A hubot script that lets you create and track your goals
 
-### Configuration:
+### Installation
+1. Add `hubot-goal-tracker` to your hubot's dependencies in `package.json`.
+2. Run `npm install` to pull the package.
+3. Add `hubot-goal-tracker` to `external-scripts.json`
+   which should be at your hubot's root dir.
+4. Restart hubot.
+
+### Configuration
     # CouchDB API endpoint
     HUBOT_COUCHDB_URL=http://USERNAME:PASSWORD@couchdb.domain.com:5984
     # OR the following if you want to use a different database named 'my_db'
@@ -13,12 +20,12 @@ A hubot script that lets you create and track your goals
     # For HipChat this is the XMPP JID of the room
     HUBOT_GOAL_TRACKER_ROOM=<ROOM_ID>
 
-### Commands:
+### Commands
     hubot add goal "<GOAL>" # adds a goal for the weekend. (quotes required!)
     hubot goals # shows pending goals
     hubot goal <GOAL_ID> done # marks goal with id = GOAL_ID as done
 
-### Development :
+### Development
 If couchdb is running locally on localhost:5984, you don't need to set
 HUBOT_COUCHDB_URL.
 
