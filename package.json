@@ -1,7 +1,7 @@
 {
   "name": "hubot-goal-tracker",
   "description": "A hubot script that lets you create and track your goals",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Emil Soman <emil@codemancers.com>",
   "license": "MIT",
 
