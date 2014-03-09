@@ -12,11 +12,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/codemancers/hubot-goal-tracker.git"
+    "url": "git://github.com/code-mancers/hubot-goal-tracker.git"
   },
 
   "bugs": {
-    "url": "https://github.com/codemancers/hubot-goal-tracker/issues"
+    "url": "https://github.com/code-mancers/hubot-goal-tracker/issues"
   },
 
   "dependencies": {
